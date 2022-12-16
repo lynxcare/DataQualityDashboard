@@ -288,7 +288,7 @@ executeDqChecks <- function(connectionDetails,
     # Write result
     if (nchar(outputFile) == 0) {
       endTimestamp <- format(endTime, "%Y%m%d%H%M%S")
-      outputFile <- sprintf("%s-%s.json", tolower(metadata$CDM_SOURCE_ABBREVIATION), endTimestamp)
+      outputFile <- sprintf("%s-%s.json", tolower(cdmSourceName), endTimestamp)
     }
 
     .writeResultsToJson(allResults, outputFolder, outputFile)
